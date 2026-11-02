@@ -10,8 +10,6 @@ Prisma ORM.
 - npm
 - An existing SQLite database, such as `sync-server/server.db`
 
-The startup scripts use a POSIX shell, as available on macOS and Linux.
-
 ## Setup
 
 From this directory, install dependencies and create your local configuration:
@@ -42,9 +40,9 @@ Open [http://localhost:5555](http://localhost:5555), or the port configured in
 `.env.local`. The browser does not open automatically. Press Ctrl+C in the
 terminal to stop Studio.
 
-`npm start` runs the same command. Use either command to load `.env.local`;
-`npm run studio` is the internal script that expects environment variables to
-already be set.
+`npm start` and `npm run studio` run the same launcher and load `.env.local`.
+The port defaults to `5555` when `PORT` is unset. An exported `PORT` overrides
+the value in `.env.local`; invalid values produce an error before Studio starts.
 
 To override the configured port for one run:
 
