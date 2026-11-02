@@ -1,0 +1,18 @@
+{
+	"name": "sync-db-studio",
+	"version": "1.0.0",
+	"private": true,
+	"description": "Local SQLite data editor for Sync development",
+	"license": "ISC",
+	"type": "module",
+	"engines": {
+		"node": "^22.18.0 || >=24.0.0"
+	},
+	"scripts": {
+		"dev": "prisma studio --port 5555 --browser none",
+		"start": "npm run dev"
+	},
+	"devDependencies": {
+		"prisma": "7.10.1"
+	}
+}
