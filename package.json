@@ -3,16 +3,18 @@
 	"version": "1.0.0",
 	"private": true,
 	"description": "Local SQLite data editor for Sync development",
-	"license": "ISC",
+	"license": "UNLICENSED",
 	"type": "module",
 	"engines": {
-		"node": "^22.18.0 || >=24.0.0"
+		"node": "^22.12.0 || ^24.0.0 || >=26.0.0"
 	},
 	"scripts": {
-		"dev": "prisma studio --port 5555 --browser none",
-		"start": "npm run dev"
+		"dev": "node --env-file=.env.local --run studio",
+		"start": "npm run dev",
+		"studio": "prisma studio --port \"$PORT\" --browser none"
 	},
 	"devDependencies": {
 		"prisma": "7.10.1"
-	}
+	},
+	"author": "BadVR, Inc."
 }
